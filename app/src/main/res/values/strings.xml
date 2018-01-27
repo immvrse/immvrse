@@ -5,4 +5,8 @@
     <string name="sign_in">Sign in</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="sign_up">Don\'t have an account? Sign up</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
+    <string name="sign_up_2">Sign Up</string>
 </resources>
