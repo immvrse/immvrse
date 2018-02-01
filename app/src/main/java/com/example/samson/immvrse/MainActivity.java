@@ -16,13 +16,13 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        binding.signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OnBoarding.class);
-                startActivity(intent);
-            }
-        });
+//        binding.signIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, OnboardingActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         binding.signUp.setOnClickListener(new View.OnClickListener() {
             @Override
