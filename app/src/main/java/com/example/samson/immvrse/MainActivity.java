@@ -31,5 +31,13 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        binding.signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, OnBoardingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

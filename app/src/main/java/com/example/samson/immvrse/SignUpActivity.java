@@ -33,5 +33,7 @@ public class SignUpActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
