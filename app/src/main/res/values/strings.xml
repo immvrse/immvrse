@@ -27,4 +27,7 @@
     <string name="music">Music</string>
     <string name="food">Food</string>
     <string name="concert">Concerts</string>
+    <string name="location">Your Location</string>
+    <string name="location_description">Get recommendations of VR content based on your preferences</string>
+    <string name="location_button_text">Add your location</string>
 </resources>
