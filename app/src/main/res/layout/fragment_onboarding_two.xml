@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:paddingBottom="100dp"
+            android:paddingBottom="112dp"
             android:text="@string/onboarding_description"
             android:textColor="@android:color/white"
             android:textSize="12sp"

@@ -11,8 +11,8 @@ public class OnboardingFragmentFour extends Fragment {
     private String title;
     private int page;
 
-    public static OnboardingFragmentThree newInstance(int page, String title) {
-        OnboardingFragmentThree fragment = new OnboardingFragmentThree();
+    public static OnboardingFragmentFour newInstance(int page, String title) {
+        OnboardingFragmentFour fragment = new OnboardingFragmentFour();
         Bundle bundle = new Bundle();
         bundle.putInt("page", page);
         bundle.putString("title", title);
