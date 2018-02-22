@@ -26,7 +26,7 @@ public class OnBoardingActivity extends FragmentActivity {
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 3;
+        private static int NUM_ITEMS = 4;
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -46,6 +46,8 @@ public class OnBoardingActivity extends FragmentActivity {
                     return OnboardingFragmentTwo.newInstance(1, "Second page");
                 case 2:
                     return OnboardingFragmentThree.newInstance(2, "Third page");
+                case 3:
+                    return OnboardingFragmentFour.newInstance(3, "Fourth page");
                 default:
                     return null;
             }

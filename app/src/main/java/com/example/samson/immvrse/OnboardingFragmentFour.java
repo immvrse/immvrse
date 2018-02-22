@@ -6,13 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class OnboardingFragmentTwo extends Fragment {
+public class OnboardingFragmentFour extends Fragment {
 
     private String title;
     private int page;
 
-    public static OnboardingFragmentTwo newInstance(int page, String title) {
-        OnboardingFragmentTwo fragment = new OnboardingFragmentTwo();
+    public static OnboardingFragmentThree newInstance(int page, String title) {
+        OnboardingFragmentThree fragment = new OnboardingFragmentThree();
         Bundle bundle = new Bundle();
         bundle.putInt("page", page);
         bundle.putString("title", title);
@@ -24,12 +24,12 @@ public class OnboardingFragmentTwo extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         page = getArguments().getInt("page", 0);
-        title = getArguments().getString("title", "title");
+        title = getArguments().getString("title");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_onboarding_two, container, false);
+        View view = inflater.inflate(R.layout.fragment_onboarding_four, container, false);
         return view;
     }
 }
