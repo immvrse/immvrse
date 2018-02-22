@@ -16,7 +16,7 @@
             android:layout_marginTop="90dp"
             android:text="@string/discover_vr_content"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/title_size"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

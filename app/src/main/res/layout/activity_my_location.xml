@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_blue_xxxhdpi"
+        android:padding="@dimen/padding_standard">
+
+        <TextView
+            android:id="@+id/location_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/location"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
+            app:layout_constraintRight_toRightOf="@id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/location_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/location_description"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/location_title" />
+
+        <ImageView
+            android:id="@+id/location_image_view"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/map_xxxhdpi"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_description" />
+
+        <Button
+            android:id="@+id/add_location_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rounded_button_yellow"
+            android:text="@string/location_button_text"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_image_view" />
+
+        <Button
+            android:id="@+id/not_now_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:text="@string/not_now"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

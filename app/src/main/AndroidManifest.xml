@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".OnBoardingActivity" />
         <activity android:name=".SignUpActivity" />
+        <activity android:name=".LocationActivity" />
     </application>
 
 </manifest>
