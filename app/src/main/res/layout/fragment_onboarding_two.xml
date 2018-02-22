@@ -1,0 +1,79 @@
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/onboarding_token"
+        android:padding="20dp"
+        tools:context="com.example.samson.immvrse.OnboardingActivity$PlaceholderFragment">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/token"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="112dp"
+            android:text="@string/onboarding_description"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <Button
+            android:id="@+id/not_now_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/rounded_button_grey"
+            android:text="@string/not_now"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/purchase_imv_button"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <Button
+            android:id="@+id/purchase_imv_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/standard_button_height"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/rounded_button_yellow"
+            android:text="@string/purchase_imv"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@id/not_now_button"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <ImageView
+            android:id="@+id/indicator_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/dots_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

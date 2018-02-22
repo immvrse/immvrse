@@ -1,0 +1,67 @@
+<layout>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_blue"
+        android:padding="20dp"
+        tools:context="com.example.samson.immvrse.OnboardingActivity$PlaceholderFragment">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/onboarding_four_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="50dp"
+            android:text="@string/onboarding_four_description"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"/>
+
+        <include layout="@layout/onboarding_card_view"
+            android:id="@+id/card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="12dp"
+            android:textAllCaps="true"
+            android:background="@drawable/rounded_button_yellow"
+            android:text="@string/continue_text"
+            app:layout_constraintTop_toBottomOf="@id/card_view"/>
+
+        <ImageView
+            android:id="@+id/indicator_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/indicator_dot_4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
