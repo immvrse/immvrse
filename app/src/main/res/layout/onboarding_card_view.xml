@@ -1,58 +1,23 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:orientation="horizontal">
+    android:layout_marginStart="-10dp"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view_film"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            app:cardCornerRadius="4dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/film_image_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/films" />
-
-                <TextView
-                    android:id="@+id/film_text_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:background="@color/cardview_light_background"
-                    android:gravity="center"
-                    android:text="@string/film"
-                    android:textColor="#757575"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="@id/film_image_view"
-                    app:layout_constraintRight_toRightOf="@id/film_image_view" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+        android:orientation="horizontal"
+        android:layout_marginBottom="60dp">
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_concert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="180dp"
             android:layout_marginEnd="20dp"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
@@ -64,19 +29,19 @@
                 <ImageView
                     android:id="@+id/concert_image_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/events" />
 
                 <TextView
                     android:id="@+id/concert_text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
                     android:text="@string/concert"
-                    android:textColor="#757575"
-                    android:textSize="15sp"
+                    android:textColor="@color/card_view_text"
+                    android:textSize="@dimen/card_view_text_size"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/concert_image_view"
@@ -85,10 +50,47 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/card_view_film"
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/film_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/films" />
+
+                <TextView
+                    android:id="@+id/film_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cardview_light_background"
+                    android:gravity="center"
+                    android:text="@string/film"
+                    android:textColor="@color/card_view_text"
+                    android:textSize="@dimen/card_view_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/film_image_view"
+                    app:layout_constraintRight_toRightOf="@id/film_image_view" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:id="@+id/card_view_food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="4dp"
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height"
+            app:cardCornerRadius="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
@@ -100,19 +102,19 @@
                 <ImageView
                     android:id="@+id/food_image_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/food" />
 
                 <TextView
                     android:id="@+id/food_text_view"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="match_parent"
                     android:background="@color/cardview_light_background"
                     android:gravity="center"
                     android:text="@string/food"
-                    android:textColor="#757575"
-                    android:textSize="15sp"
+                    android:textColor="@color/card_view_text"
+                    android:textSize="@dimen/card_view_text_size"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="@id/food_image_view"
@@ -120,4 +122,4 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
-</ScrollView>
+</HorizontalScrollView>
