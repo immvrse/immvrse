@@ -33,20 +33,16 @@ public class OnboardingFragmentFour extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_onboarding_four, container, false);
         FragmentOnboardingFourBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_onboarding_four, container, false);
-
+        binding.getRoot();
         binding.continueButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LocationActivity.class);
                 startActivity(intent);
             }
         });
-        return view;
+        return binding.getRoot();
     }
-
-
-
-
 }
