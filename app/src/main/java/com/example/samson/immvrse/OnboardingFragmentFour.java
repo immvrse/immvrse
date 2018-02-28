@@ -42,6 +42,6 @@ public class OnboardingFragmentFour extends Fragment {
                 startActivity(intent);
             }
         });
-return binding.getRoot();
+        return binding.getRoot();
     }
-    }
+}

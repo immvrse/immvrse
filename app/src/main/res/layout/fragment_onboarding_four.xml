@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.ConstraintLayout
-=======
-<layout>
-
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
->>>>>>> d864b51286ad764d33933163487c1f48bcb0757a
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -62,11 +56,7 @@
             android:background="@drawable/rounded_button_yellow"
             android:text="@string/continue_text"
             android:textAllCaps="true"
-<<<<<<< HEAD
-            android:textSize="12sp"
-=======
             android:textSize="12dp"
->>>>>>> d864b51286ad764d33933163487c1f48bcb0757a
             app:layout_constraintTop_toBottomOf="@id/card_view" />
 
         <ImageView

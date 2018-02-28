@@ -9,12 +9,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-<<<<<<< HEAD
-        android:layout_marginBottom="62dp">
-=======
-        android:layout_marginBottom="60dp">
->>>>>>> d864b51286ad764d33933163487c1f48bcb0757a
+        android:layout_marginBottom="62dp"
+        android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_concert"
