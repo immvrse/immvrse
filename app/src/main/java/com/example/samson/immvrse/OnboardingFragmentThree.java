@@ -29,6 +29,11 @@ public class OnboardingFragmentThree extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+<<<<<<< HEAD
         return inflater.inflate(R.layout.fragment_onboarding_three, container, false);
+=======
+        View view = inflater.inflate(R.layout.fragment_onboarding_three, container, false);
+        return view;
+>>>>>>> d864b51286ad764d33933163487c1f48bcb0757a
     }
 }

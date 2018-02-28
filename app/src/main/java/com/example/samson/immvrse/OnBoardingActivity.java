@@ -12,12 +12,24 @@ import com.example.samson.immvrse.databinding.ActivityOnboardingBinding;
 
 public class OnBoardingActivity extends FragmentActivity {
 
+<<<<<<< HEAD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityOnboardingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_onboarding);
         ViewPager viewPager = binding.viewpager;
         FragmentPagerAdapter fragmentPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+=======
+    ActivityOnboardingBinding binding;
+    FragmentPagerAdapter fragmentPagerAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_onboarding);
+        ViewPager viewPager = binding.viewpager;
+        fragmentPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+>>>>>>> d864b51286ad764d33933163487c1f48bcb0757a
         viewPager.setAdapter(fragmentPagerAdapter);
         viewPager.setOffscreenPageLimit(1);
     }
