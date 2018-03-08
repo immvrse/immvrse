@@ -20,6 +20,9 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LocationActivity" />
         <activity android:name=".NewsFeedActivity" />
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news"></activity>
     </application>
 
 </manifest>
