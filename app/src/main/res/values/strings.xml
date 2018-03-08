@@ -30,4 +30,8 @@
     <string name="location">Your Location</string>
     <string name="location_description">Get recommendations of VR content based on your preferences</string>
     <string name="location_button_text">Add your location</string>
+    <string name="news_feed">News Feed</string>
+    <string name="name_placeholder">Name</string>
+    <string name="post_time_placeholder">Post Time</string>
+    <string name="post_description">Get recommendations of VR content based on your preferences</string>
 </resources>

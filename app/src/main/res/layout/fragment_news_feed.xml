@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="15dp">
+
+        <ImageButton
+            android:id="@+id/profile_picture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_photo_xxxhdpi"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/name_placeholder"
+            android:textColor="#37474F"
+            app:layout_constraintLeft_toRightOf="@id/profile_picture" />
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:paddingBottom="20dp"
+            android:text="@string/post_time_placeholder"
+            android:textColor="#37474F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/profile_name"
+            app:layout_constraintTop_toBottomOf="@id/profile_name" />
+
+        <ImageButton
+            android:id="@+id/category_button"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/category_xxxhdpi"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/news_feed_image"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/news_feed_image_xxxhdpi"
+            app:layout_constraintTop_toBottomOf="@id/post_time"/>
+
+        <TextView
+            android:padding="20dp"
+            android:id="@+id/post_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/post_description"
+            app:layout_constraintTop_toBottomOf="@id/news_feed_image"
+            android:textColor="#37474F"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:src="@drawable/divider"
+            app:layout_constraintTop_toBottomOf="@id/post_description" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
