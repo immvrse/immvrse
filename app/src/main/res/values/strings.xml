@@ -51,4 +51,5 @@
     <string name="favourites">Favourites</string>
     <string name="connections">Connections</string>
     <string name="logout">Logout</string>
+    <string name="title_activity_menu_navigation">MenuNavigationActivity</string>
 </resources>

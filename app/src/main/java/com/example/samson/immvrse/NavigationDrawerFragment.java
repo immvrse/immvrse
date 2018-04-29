@@ -2,15 +2,15 @@ package com.example.samson.immvrse;
 
 
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -58,6 +58,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
+    //ActivityMenuNavigationBinding binding;
+
     public NavigationDrawerFragment() {
     }
 
@@ -90,7 +92,7 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mDrawerListView = (ListView) inflater.inflate(
-                R.layout.drawer_news, container, false);
+                R.layout.drawer_menu_navigation, container, false);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -127,10 +129,6 @@ public class NavigationDrawerFragment extends Fragment {
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
-
-        ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
@@ -247,11 +245,26 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
-            return true;
-        }
+        int id = item.getItemId();
 
+        switch(id) {
+            case(R.id.home):
+                Toast.makeText(getActivity(), "Home clicked", Toast.LENGTH_SHORT);
+            case(R.id.profile):
+                Toast.makeText(getActivity(), "Profile clicked", Toast.LENGTH_SHORT);
+            case(R.id.message):
+                Toast.makeText(getActivity(), "Message clicked", Toast.LENGTH_SHORT);
+            case(R.id.activity):
+                Toast.makeText(getActivity(), "Activity clicked", Toast.LENGTH_SHORT);
+            case(R.id.favourites):
+                Toast.makeText(getActivity(), "Favourites clicked", Toast.LENGTH_SHORT);
+            case(R.id.connections):
+                Toast.makeText(getActivity(), "Connections clicked", Toast.LENGTH_SHORT);
+            case(R.id.logout):
+                Toast.makeText(getActivity(), "Logout clicked", Toast.LENGTH_SHORT);
+            default:
+                Log.e("Menu item", "No menu item selected");
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -260,13 +273,12 @@ public class NavigationDrawerFragment extends Fragment {
      * 'context', rather than just what's in the current screen.
      */
     private void showGlobalContextActionBar() {
-        ActionBar actionBar = getActionBar();
+        android.app.ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setTitle(R.string.app_name);
     }
 
-    private ActionBar getActionBar() {
+    private android.app.ActionBar getActionBar() {
         return getActivity().getActionBar();
     }
 
