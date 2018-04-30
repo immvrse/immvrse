@@ -1,24 +1,24 @@
 <layout>
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-        <com.google.vr.sdk.widgets.video.VrVideoView
-            android:id="@+id/video_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <com.google.vr.sdk.widgets.video.VrVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-        <SeekBar
-            android:id="@+id/seek_bar"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"
-            style="?android:attr/progressBarStyleHorizontal"/>
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_height="32dp"
+        android:layout_width="match_parent"
+        style="?android:attr/progressBarStyleHorizontal"/>
 
-        <Button
-            android:id="@+id/btn_volume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/volume"/>
+    <Button
+        android:id="@+id/btn_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume"/>
 
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
 </layout>
