@@ -2,12 +2,16 @@ package com.example.samson.immvrse;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.SeekBar;
 
 import com.example.samson.immvrse.databinding.ActivityVideoViewerBinding;
 import com.google.vr.sdk.widgets.video.VrVideoEventListener;
+import com.google.vr.sdk.widgets.video.VrVideoView;
+
+import java.io.IOException;
 
 public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
 
@@ -88,6 +92,21 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
         @Override
         public void onCompletion() {
             super.onCompletion();
+        }
+    }
+
+    class VideoLoaderTask extends AsyncTask<Void, Void, Boolean> {
+
+        @Override
+        protected Boolean doInBackground(Void... voids) {
+            try {
+                VrVideoView.Options options = new VrVideoView.Options();
+                options.inputType = VrVideoView.Options.TYPE_MONO;
+                binding.videoView.loadVideoFromAsset("london_bridge.mp4", options);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return true;
         }
     }
 
