@@ -21,6 +21,7 @@
         <activity android:name=".LocationActivity" />
         <activity android:name=".NewsFeedActivity" />
         <activity android:name=".MenuNavigationActivity" />
-    </application>
+        <activity android:name=".VideoViewerActivity" />
+</application>
 
 </manifest>
