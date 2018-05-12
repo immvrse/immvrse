@@ -34,4 +34,23 @@
     <string name="name_placeholder">Name</string>
     <string name="post_time_placeholder">Post Time</string>
     <string name="post_description">Get recommendations of VR content based on your preferences</string>
+    <string name="title_activity_news">NewsActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="message">Message</string>
+    <string name="activity">Activity</string>
+    <string name="favourites">Favourites</string>
+    <string name="connections">Connections</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_menu_navigation">MenuNavigationActivity</string>
+    <string name="volume">Volume</string>
 </resources>

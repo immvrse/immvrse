@@ -20,6 +20,8 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LocationActivity" />
         <activity android:name=".NewsFeedActivity" />
-    </application>
+        <activity android:name=".MenuNavigationActivity" />
+        <activity android:name=".VideoViewerActivity" />
+</application>
 
 </manifest>
