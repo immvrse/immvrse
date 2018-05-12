@@ -95,7 +95,7 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
         }
     }
 
-    class VideoLoaderTask extends AsyncTask<Void, Void, Boolean> {
+     protected class VideoLoaderTask extends AsyncTask<Void, Void, Boolean> {
 
         @Override
         protected Boolean doInBackground(Void... voids) {

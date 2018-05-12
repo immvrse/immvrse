@@ -2,7 +2,7 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/constraintLayout"
+        android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_blue_xxxhdpi"
@@ -16,9 +16,8 @@
             android:text="@string/location"
             android:textSize="@dimen/title_size"
             android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
-            app:layout_constraintRight_toRightOf="@id/constraintLayout"
-            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+            app:layout_constraintLeft_toLeftOf="@id/parent"
+            app:layout_constraintRight_toRightOf="@id/parent" />
 
         <TextView
             android:id="@+id/location_description"

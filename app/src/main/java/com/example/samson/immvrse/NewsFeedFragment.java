@@ -13,8 +13,6 @@ import com.example.samson.immvrse.databinding.FragmentNewsFeedBinding;
 
 public class NewsFeedFragment extends Fragment {
 
-    FragmentNewsFeedBinding binding;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +21,7 @@ public class NewsFeedFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_news_feed, container, false);
+        FragmentNewsFeedBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_news_feed, container, false);
 
         binding.newsFeedImage.setOnClickListener(new View.OnClickListener() {
             @Override
