@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_background"
-    android:paddingLeft="50dp"
-    android:paddingRight="50dp"
+    android:paddingStart="@dimen/padding_standard_large"
+    android:paddingEnd="@dimen/padding_standard_large"
     tools:context="com.example.samson.immvrse.MainActivity">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/logo_height"
         android:src="@drawable/logo_transparent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -22,17 +22,17 @@
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="@dimen/edit_text_standard"
+        android:layout_marginTop="@dimen/edit_text_standard"
         android:background="@drawable/rounded_button_grey"
         android:hint="@string/email"
-        android:textSize="15dp"
-        android:paddingLeft="30dp"
+        android:textSize="@dimen/edit_text_size"
+        android:paddingStart="@dimen/edit_text_padding"
         android:textColorHint="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:maxLines="1"/>
 
     <EditText
@@ -42,20 +42,20 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_button_grey"
         android:hint="@string/password"
-        android:textSize="15dp"
-        android:paddingLeft="30dp"
+        android:textSize="@dimen/edit_text_size"
+        android:paddingStart="@dimen/edit_text_padding"
         android:textColorHint="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:maxLines="1"/>
 
     <Button
         android:id="@+id/sign_in"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="@dimen/standard_button_height"
+        android:layout_marginTop="@dimen/button_margin_main"
         android:background="@drawable/rounded_button_yellow"
         android:text="@string/sign_in"
         android:textAllCaps="false"
@@ -68,7 +68,7 @@
         android:id="@+id/forgot_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/forgot_password_margin"
         android:background="@android:color/transparent"
         android:text="@string/forgot_your_password"
         android:textAllCaps="false"
@@ -81,7 +81,7 @@
         android:id="@+id/sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_standard_small"
         android:background="@android:color/transparent"
         android:text="@string/sign_up"
         android:textAllCaps="false"
@@ -89,7 +89,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="@dimen/margin_bottom_small" />
 
 </android.support.constraint.ConstraintLayout>
 </layout>
