@@ -101,7 +101,7 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
         protected Boolean doInBackground(Void... voids) {
             try {
                 VrVideoView.Options options = new VrVideoView.Options();
-                options.inputType = VrVideoView.Options.TYPE_MONO;
+                options.inputType = VrVideoView.Options.TYPE_STEREO_OVER_UNDER;
                 binding.videoView.loadVideoFromAsset("london_bridge.mp4", options);
             } catch (IOException e) {
                 e.printStackTrace();
