@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.widget.SeekBar;
 
 import com.example.samson.immvrse.databinding.ActivityVideoViewerBinding;
+import com.google.vr.sdk.widgets.common.VrWidgetView;
 import com.google.vr.sdk.widgets.video.VrVideoEventListener;
 import com.google.vr.sdk.widgets.video.VrVideoView;
 
@@ -15,6 +16,8 @@ import java.io.IOException;
 
 public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
 
+    private static final String STATE_PROGRESS = "state_progress";
+    private static final String STATE_DURATION = "state_duration";
     private ActivityVideoViewerBinding binding;
     private boolean isPaused;
 
@@ -34,19 +37,36 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
     }
 
     @Override
-    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean progressChanged) {
+        if (progressChanged) {
+            binding.videoView.seekTo(progress);
+        }
     }
 
     @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putLong(STATE_PROGRESS, binding.videoView.getCurrentPosition());
+        outState.putLong(STATE_DURATION, binding.videoView.getDuration());
 
+        super.onSaveInstanceState(outState);
     }
 
     @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
 
+        long progress = savedInstanceState.getLong(STATE_PROGRESS);
+
+        binding.videoView.seekTo(progress);
+        binding.seekBar.setMax((int) savedInstanceState.getLong(STATE_DURATION));
+        binding.seekBar.setProgress((int) progress);
     }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {}
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {}
 
     @Override
     protected void onPause() {
@@ -68,6 +88,14 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
         super.onDestroy();
     }
 
+    public void playPause() {
+        if (isPaused) {
+            binding.videoView.playVideo();
+        } else {
+            binding.videoView.pauseVideo();
+        }
+    }
+
     private class ActivityEventListener extends VrVideoEventListener {
         @Override
         public void onLoadSuccess() {
@@ -81,33 +109,42 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
 
         @Override
         public void onClick() {
-            super.onClick();
+            playPause();
         }
 
         @Override
         public void onNewFrame() {
             super.onNewFrame();
+            binding.seekBar.setProgress((int) binding.videoView.getCurrentPosition());
         }
 
         @Override
         public void onCompletion() {
-            super.onCompletion();
+            binding.videoView.seekTo(0);
         }
     }
 
-     protected class VideoLoaderTask extends AsyncTask<Void, Void, Boolean> {
+    class VideoLoaderTask extends AsyncTask<Void, Void, Boolean> {
 
         @Override
         protected Boolean doInBackground(Void... voids) {
             try {
                 VrVideoView.Options options = new VrVideoView.Options();
                 options.inputType = VrVideoView.Options.TYPE_STEREO_OVER_UNDER;
-                binding.videoView.loadVideoFromAsset("london_bridge.mp4", options);
+                binding.videoView.loadVideoFromAsset("congo.mp4", options);
+                runOnUiThread(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        binding.videoView.setDisplayMode(VrWidgetView.DisplayMode.FULLSCREEN_STEREO);
+                    }
+                });
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
             return true;
         }
     }
-
 }
+
