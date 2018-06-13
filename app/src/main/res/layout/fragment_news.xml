@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_margin"
-    android:paddingLeft="@dimen/activity_margin"
-    android:paddingRight="@dimen/activity_margin"
-    android:paddingTop="@dimen/activity_margin"
+    android:paddingBottom="@dimen/news_feed_padding_bottom"
+    android:paddingStart="@dimen/news_feed_padding_left"
+    android:paddingEnd="@dimen/news_feed_padding_right"
+    android:paddingTop="@dimen/news_feed_padding_top"
     tools:context="com.example.samson.immvrse.NewsActivity$PlaceholderFragment">
 
     <TextView

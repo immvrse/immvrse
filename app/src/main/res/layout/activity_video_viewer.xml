@@ -10,7 +10,7 @@
 
         <SeekBar
             android:id="@+id/seek_bar"
-            android:layout_height="32dp"
+            android:layout_height="@dimen/seekbar_height"
             android:layout_width="match_parent"
             style="?android:attr/progressBarStyleHorizontal"/>
 

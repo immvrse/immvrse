@@ -147,4 +147,3 @@ public class VideoViewerActivity extends Activity implements SeekBar.OnSeekBarCh
         }
     }
 }
-
