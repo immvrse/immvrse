@@ -6,5 +6,5 @@
     android:background="#cccc"
     android:choiceMode="singleChoice"
     android:divider="@android:color/transparent"
-    android:dividerHeight="0dp"
+    android:dividerHeight="@dimen/divider_height"
     tools:context="com.example.samson.immvrse.NavigationDrawerFragment" />

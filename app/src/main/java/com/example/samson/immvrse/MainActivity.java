@@ -3,7 +3,9 @@ package com.example.samson.immvrse;
 import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 
 import com.example.samson.immvrse.databinding.ActivityMainBinding;
@@ -24,12 +26,15 @@ public class MainActivity extends Activity {
             }
         });
 
-        binding.signIn.setOnClickListener(new View.OnClickListener() {
+        binding.signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, OnBoardingActivity.class);
                 startActivity(intent);
             }
         });
+
+        binding.password.setTypeface(Typeface.DEFAULT);
+        binding.password.setTransformationMethod(new PasswordTransformationMethod());
     }
 }

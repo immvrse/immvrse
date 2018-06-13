@@ -9,15 +9,15 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/margin_bottom_medium"
         android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_concert"
             android:layout_width="@dimen/card_view_width"
-            android:layout_height="180dp"
-            android:layout_marginEnd="20dp"
-            app:cardCornerRadius="10dp"
+            android:layout_height="@dimen/onboarding_card_view_height"
+            android:layout_marginEnd="@dimen/margin_bottom_small"
+            app:cardCornerRadius="@dimen/onboarding_card_view_radius"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
@@ -29,7 +29,7 @@
                 <ImageView
                     android:id="@+id/concert_image_view"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="@dimen/onboarding_image_height"
                     android:scaleType="fitXY"
                     android:src="@drawable/events" />
 
@@ -52,9 +52,9 @@
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_film"
             android:layout_width="@dimen/card_view_width"
-            android:layout_height="@dimen/card_view_height"
-            android:layout_marginEnd="20dp"
-            app:cardCornerRadius="10dp"
+            android:layout_height="@dimen/onboarding_card_view_height"
+            android:layout_marginEnd="@dimen/margin_bottom_small"
+            app:cardCornerRadius="@dimen/onboarding_card_view_radius"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
@@ -66,7 +66,7 @@
                 <ImageView
                     android:id="@+id/film_image_view"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="@dimen/onboarding_image_height"
                     android:scaleType="fitXY"
                     android:src="@drawable/films" />
 
@@ -89,8 +89,8 @@
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_food"
             android:layout_width="@dimen/card_view_width"
-            android:layout_height="@dimen/card_view_height"
-            app:cardCornerRadius="10dp"
+            android:layout_height="@dimen/onboarding_card_view_height"
+            app:cardCornerRadius="@dimen/onboarding_card_view_radius"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
@@ -102,7 +102,7 @@
                 <ImageView
                     android:id="@+id/food_image_view"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="@dimen/onboarding_image_height"
                     android:scaleType="fitXY"
                     android:src="@drawable/food" />
 
