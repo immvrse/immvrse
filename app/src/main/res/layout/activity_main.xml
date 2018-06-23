@@ -1,95 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/home_background"
-    android:paddingStart="@dimen/padding_standard_large"
-    android:paddingEnd="@dimen/padding_standard_large"
-    tools:context="com.example.samson.immvrse.MainActivity">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/logo_height"
-        android:src="@drawable/logo_transparent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/email"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/edit_text_standard"
-        android:layout_marginTop="@dimen/edit_text_standard"
-        android:background="@drawable/rounded_button_grey"
-        android:hint="@string/email"
-        android:textSize="@dimen/edit_text_size"
-        android:paddingStart="@dimen/edit_text_padding"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"/>
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/edit_text_standard"
-        android:layout_marginTop="@dimen/margin_standard_small"
-        android:background="@drawable/rounded_button_grey"
-        android:hint="@string/password"
-        android:textSize="@dimen/edit_text_size"
-        android:paddingStart="@dimen/edit_text_padding"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        android:inputType="textPassword"
-        android:maxLines="1"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/toolbar_background"
+                android:padding="@dimen/toolbar_padding">
 
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/standard_button_height"
-        android:layout_marginTop="@dimen/button_margin_main"
-        android:background="@drawable/rounded_button_yellow"
-        android:text="@string/sign_in"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password"/>
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/forgot_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/forgot_password_margin"
-        android:background="@android:color/transparent"
-        android:text="@string/forgot_your_password"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_button" />
+                    <ImageButton
+                        android:id="@+id/menu_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/ic_menu_white_36dp"
+                        app:layout_constraintLeft_toLeftOf="parent" />
 
-    <Button
-        android:id="@+id/sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_standard_small"
-        android:background="@android:color/transparent"
-        android:text="@string/sign_up"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="@dimen/margin_bottom_small" />
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/news_feed"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/toolbar_title_size"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/menu_button" />
 
-</android.support.constraint.ConstraintLayout>
+                    <ImageButton
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_search_white_36dp"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/content_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:background="@color/navigation_drawer_background"
+            app:menu="@menu/news"
+            app:headerLayout="@layout/navigation_header"
+            />
+
+    </android.support.v4.widget.DrawerLayout>
 </layout>

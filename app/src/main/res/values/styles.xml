@@ -1,11 +1,14 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="Theme.Holo.NoActionBar.Fullscreen" parent="Theme.Holo.NoActionBar.Fullscreen">
+    <style name="ImmvrseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#424242</item>
         <item name="colorPrimaryDark">#212121</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/blue_background</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
 </resources>

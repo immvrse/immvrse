@@ -29,7 +29,7 @@ public class SignUpActivity extends Activity {
         binding.signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LogInActivity.class);
                 startActivity(intent);
             }
         });

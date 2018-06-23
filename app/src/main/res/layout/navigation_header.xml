@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_background"
+        android:paddingTop="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_standard">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="@dimen/margin_start_small"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_picture_xxxhdpi"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_small"
+            android:text="@string/navigation_title"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintStart_toStartOf="@id/profile_image"
+            android:textSize="@dimen/navigation_header_title"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
