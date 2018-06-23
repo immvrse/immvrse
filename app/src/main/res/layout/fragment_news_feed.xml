@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.samson.immvrse.NewsFeedViewModel"/>
+    </data>
+
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/profile_title_margin"
-            android:text="@string/name_placeholder"
+            android:text="@{viewModel.name}"
             android:textColor="@color/profile_title_color"
             app:layout_constraintLeft_toRightOf="@id/profile_picture" />
 
@@ -61,7 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_standard"
-            android:text="@string/post_description"
+            android:text="@{viewModel.description}
+            
             android:textColor="@color/news_description_color"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/news_feed_image" />
