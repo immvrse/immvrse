@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -25,16 +25,16 @@
                     android:src="@drawable/ic_menu_white_36dp"
                     app:layout_constraintLeft_toLeftOf="parent" />
 
-            <TextView
-                android:id="@+id/toolbar_title"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="@string/news_feed"
-                android:textAlignment="center"
-                android:textSize="@dimen/toolbar_title_size"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@id/menu_button" />
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/news_feed"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/toolbar_title_size"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/menu_button" />
 
                 <ImageButton
                     android:id="@+id/search"
@@ -46,37 +46,6 @@
 
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.Toolbar>
+    </android.support.v4.widget.DrawerLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
-            app:layout_constraintTop_toBottomOf="@id/toolbar">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/news_feed_padding_top">
-
-                <fragment
-                    android:id="@+id/fragment"
-                    android:name="com.example.samson.immvrse.NewsFeedFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <fragment
-                    android:id="@+id/fragment2"
-                    android:name="com.example.samson.immvrse.NewsFeedFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <fragment
-                    android:id="@+id/fragment3"
-                    android:name="com.example.samson.immvrse.NewsFeedFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-        </ScrollView>
-    </android.support.constraint.ConstraintLayout>
 </layout>

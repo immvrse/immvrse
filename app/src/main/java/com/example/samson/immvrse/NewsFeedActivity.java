@@ -16,13 +16,7 @@ public class NewsFeedActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_news_feed);
-
-//        binding.menuButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(NewsFeedActivity.this, MenuNavigationActivity.class);
-//                startActivity(intent);
-//            }
-//
+        binding.getRoot();
     }
+
 }
