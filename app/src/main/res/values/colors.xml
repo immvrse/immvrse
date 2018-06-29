@@ -3,9 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="textColorPrimary">@android:color/white</color>
     <color name="card_view_text">#9E9E9E</color>
-    <color name="toolbar_background">#37474F</color>
+    <color name="toolbar_background">#656565</color>
     <color name="profile_title_color">#37474F</color>
     <color name="news_time_color">#37474F</color>
     <color name="news_description_color">#37474F</color>
+    <color name="blue_background">#2D324F</color>
+    <color name="text_color_primary">#ffffff</color>
+    <color name="text_color_secondary">#ffffff</color>
+    <color name="navigation_drawer_background">#656565</color>
+    <color name="category_button">#74B35F</color>
 </resources>

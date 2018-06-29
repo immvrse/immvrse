@@ -43,7 +43,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_example">Example action</string>
+    <string name="navigation_title">John Doe</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="message">Message</string>
@@ -53,4 +53,6 @@
     <string name="logout">Logout</string>
     <string name="title_activity_menu_navigation">MenuNavigationActivity</string>
     <string name="volume">Volume</string>
+    <string name="wallet">Wallet</string>
+    <string name="category_travel">Travel</string>
 </resources>

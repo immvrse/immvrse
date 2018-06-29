@@ -19,7 +19,7 @@ public class LocationActivity extends Activity {
         binding.notNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LocationActivity.this, NewsFeedActivity.class);
+                Intent intent = new Intent(LocationActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
