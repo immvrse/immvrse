@@ -55,4 +55,9 @@
     <string name="volume">Volume</string>
     <string name="wallet">Wallet</string>
     <string name="category_travel">Travel</string>
+    <string name="thank_you_for_signing_up">Thank You For Signing Up</string>
+    <string name="registration_success_description">You will receive a notification as soon as our DApp is live.  In the mean time, why not check out or website and join our ICO to be part of this revolution?</string>
+    <string name="queue_title">Your Queue Number is:</string>
+    <string name="queue_placeholder">6,058</string>
+    <string name="join_ico">Join ICO</string>
 </resources>
