@@ -67,7 +67,7 @@
             app:layout_constraintTop_toBottomOf="@id/queue_number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Join ICO"
+            android:text="@string/join_ico"
             android:layout_marginTop="@dimen/margin_top_small"/>
 
 

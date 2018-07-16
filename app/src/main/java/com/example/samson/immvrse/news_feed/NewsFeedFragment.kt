@@ -14,10 +14,6 @@ import com.example.samson.immvrse.databinding.FragmentNewsFeedBinding
 class NewsFeedFragment : Fragment() {
     lateinit var binding: FragmentNewsFeedBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_news_feed, container, false)
         return binding.root
