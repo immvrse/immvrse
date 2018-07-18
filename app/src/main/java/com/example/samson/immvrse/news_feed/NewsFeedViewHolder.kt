@@ -9,5 +9,4 @@ import com.example.samson.immvrse.databinding.ViewNewsFeedBinding
 class NewsFeedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     val binding: ViewNewsFeedBinding? = DataBindingUtil.bind(itemView)
-
 }
